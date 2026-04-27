@@ -24,13 +24,22 @@ find_package(geometry_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
-rosidl_generate_interfaces(${PROJECT_NAME}
+set (msgs
   "msg/DVL.msg"
   "msg/DVLBeam.msg"
   "msg/DVLDR.msg"
   "msg/CommandResponse.msg"
   "msg/ConfigCommand.msg"
   "msg/ConfigStatus.msg"
+)
+
+set (srvs
+  "srv/GetConfig.srv"
+)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${msgs}
+  ${srvs}
   DEPENDENCIES builtin_interfaces std_msgs geometry_msgs
  )
 
