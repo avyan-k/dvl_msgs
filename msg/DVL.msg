@@ -11,13 +11,13 @@ geometry_msgs/Vector3 velocity
 float64 fom
 
 #Covariance matrix, for the velocities. The figure of merit is calculated from this (entries in (m/s)^2)
-float64[] covariance
+float64[9] covariance
 
 #Altitude of the sensor
 float64 altitude
 
 #Beams/Transducers
-DVLBeam[] beams
+DVLBeam[4] beams
 
 #Validity of velocity
 bool velocity_valid
