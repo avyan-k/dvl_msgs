@@ -15,9 +15,6 @@ float64 roll
 float64 pitch
 float64 yaw
 
-#Message type
-string type
-
 #Status message
 int64 status
 
